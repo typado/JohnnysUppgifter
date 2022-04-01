@@ -14,8 +14,8 @@ export const TableNoblePrize = () => {
     const baseApi = "https://api.nobelprize.org/v1/laureate.json"
 
     const HandleFirstNameSearch = (event) => {
-        const filtered = allData.filter(data => data.firstname.toLowerCase().includes(event.target.value.toLowerCase()))
-        setFilteredFirstName(filtered)
+        const s = allData.filter(data => data.firstname.toLowerCase().includes(event.target.value.toLowerCase()))
+        setAllData(s)
     }
     const HandleLastNameSearch = (event) => {
         const filtered = allData.filter(data => data.surname.toLowerCase().includes(event.target.value.toLowerCase()))
@@ -38,7 +38,7 @@ export const TableNoblePrize = () => {
                         <th scope="col">#</th>
                         <th scope="col">
                             <input 
-                                onChange={setFilteredFirstName}
+                                onChange={HandleFirstNameSearch}
                                 placeholder="First name" 
                             />
                         </th>

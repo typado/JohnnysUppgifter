@@ -24,7 +24,6 @@ function App() {
   }
   const onSetOneProduct = (product)=>{
     setActivePage("productInfo")
-    alert("hej hej")
     setOneProduct(product)
   }
   return (

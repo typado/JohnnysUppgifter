@@ -6,9 +6,7 @@ export const Product = (props) => {
   
 
   const onProductInfo = (product)=>{
-    console.log(product)
-    console.log(props.setOneProduct)
-    // props.setOneProduct(props.product)
+    props.setOneProduct(props.product)
 
 }
 return (
@@ -22,10 +20,10 @@ return (
         <div className="store">{props.product.category}</div>
 
         <div>
-          <a href="" className="storebutton"
+          <a className="storebutton"
             onClick={() => onProductInfo(props.product)}
           >More info</a>
-          <a href="" className="storebutton">Purchase</a>
+          
         </div>
 
       </div>
