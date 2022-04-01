@@ -1,16 +1,10 @@
 import React from 'react'
-import { fetchProduct } from './Data/ProductData'
 
-export const ProductInfo = ({product}) => {
-    useEffect(()=>{
-        fetchProducts().then( result => {
-            setProducts(result)
-            setFilteredProducts(result)}
-             )
-         }
-        ,
-    []);
+export const ProductInfo = (props) => {
   return (
-    <div>ProductInfo</div>
+    <div>
+      <h1>{props.oneProduct.title}</h1>
+      <h3>hej hej</h3>
+      </div>
   )
 }

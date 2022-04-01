@@ -29,7 +29,7 @@ export const Products = () => {
   return (
     <section className="products" id="products">
             <h1 className="heading">our products</h1>
-            <input name="search" onChange={onSearchChange} />
+            <input name="search" placeholder="...Search product"onChange={onSearchChange} />
             <div className="productgallery">
             {filteredProducts.map( p => <Product key={p.id} product={p} />  )}
             </div>

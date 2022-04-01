@@ -7,7 +7,14 @@ import {useState} from 'react';
 
 function App() {
 
+  const [oneProduct, setOneProduct] = useState({
+    price: "",
+    productName: "",
+    img: "",
+    description: "",
+    category: ""
 
+  })
 
   const [activePage, setActivePage] = useState('Product');
       
@@ -15,12 +22,16 @@ function App() {
   const onChangeActivePage = (newPage)=>{
     setActivePage(newPage)
   }
-
+  const onSetOneProduct = (product)=>{
+    setActivePage("productInfo")
+    alert("hej hej")
+    setOneProduct(product)
+  }
   return (
     <div>
 
       <Header activePage={activePage} onChangeActivePage={onChangeActivePage} />
-      <Main activePage={activePage}/>
+      <Main activePage={activePage} setOneProduct={onSetOneProduct} oneProduct={oneProduct}/>
       <Footer />
     </div>
   );
